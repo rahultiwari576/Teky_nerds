@@ -177,41 +177,6 @@
     margin: 0;
 }
 
-.partners-section {
-    margin-top: 1rem;
-}
-
-.partners-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #6b7280;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.partners-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.partner-logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #9ca3af;
-    padding: 0.5rem 1rem;
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.partner-logo:hover {
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.05);
-}
-
 /* Mission & Vision Section */
 .mission-vision-section {
     padding: 6rem 0;

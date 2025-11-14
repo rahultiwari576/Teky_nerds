@@ -12,9 +12,9 @@ const About = () => {
     ];
 
     const team = [
-        { name: 'Rahul Tiwari', role: 'CEO & Founder', image: '/rahul-tiwari.jpg', bio: 'Visionary leader with 10+ years of experience in web development.' },
-        { name: 'John Doe', role: 'CTO', image: '', bio: 'Tech expert specializing in cutting-edge web technologies.' },
-        { name: 'Mike Johnson', role: 'Senior Developer', image: '', bio: 'Full-stack developer passionate about building scalable solutions.' },
+        { name: 'Rahul Kumar', role: 'CEO & Founder', image: '/Rahul Tiwari.jpeg', bio: 'Visionary leader with 5+ years of experience in web development and specializing in cutting-edge web technologies.' },
+        { name: 'Mayukh Moitra', role: 'CTO', image: '', bio: 'Tech expert specializing in cutting-edge web technologies.' },
+        { name: 'Aman', role: 'Senior Developer', image: '', bio: 'Full-stack developer passionate about building scalable solutions.' },
     ];
 
     const achievements = [
@@ -23,8 +23,6 @@ const About = () => {
         { number: '15+', label: 'Countries Served', icon: FiAward },
         { number: '5+', label: 'Years Experience', icon: FiCalendar },
     ];
-
-    const partners = ['GONG', 'HubSpot', 'Clearbit', 'INTERCOM', 'Asana'];
 
     return (
         <div className="about-page">
@@ -55,14 +53,6 @@ const About = () => {
                             <p className="hero-description">
                                 To Build Software That Gives Customer-Facing Teams At Small And Medium Sized Business The Ability To Create Fruitful And Enduring Relationships With Customers.
                             </p>
-                            <div className="partners-section">
-                                <div className="partners-label">Our Partners</div>
-                                <div className="partners-logos">
-                                    {partners.map((partner, index) => (
-                                        <div key={index} className="partner-logo">{partner}</div>
-                                    ))}
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,10 +114,10 @@ const About = () => {
                         </div>
                         <div className="section-right">
                             <h3 className="section-subtitle">
-                                Our crew is always getting bigger, and we all share one big dream to help your business reach a level of success it's never seen before, right at the very top.
+                                United by a shared vision of excellence, we collaborate to deliver transformative digital solutions that propel businesses forward.
                             </h3>
                             <p>
-                                Tekynerds is like the brainchild of Rahul Tiwari, born in 2022. We're not just your run-of-the-mill web development company, we're more like digital architects with a global twist. Hailing from the heart of India, our crew defies distance by collaborating with businesses worldwide. We combine technical expertise with creative vision to transform ideas into powerful digital experiences.
+                                Tekynerds, founded by Rahul Kumar in 2022, is a premier web development agency specializing in creating cutting-edge digital solutions that drive business growth. Our expert team combines innovative technology with strategic design to deliver exceptional results that exceed client expectations. Based in India with a global reach, we collaborate with businesses worldwide to transform ideas into powerful digital experiences.
                             </p>
                         </div>
                     </div>

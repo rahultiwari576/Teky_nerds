@@ -1,64 +1,86 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiCloud, FiServer, FiShield, FiZap, FiDatabase, FiLayers, FiTrendingUp, FiCheckCircle } from 'react-icons/fi';
 import './ServicePage.css';
 
 const CloudServices = () => {
+    const expertise = [
+        { icon: FiCloud, text: 'Cloud Infrastructure Setup & Migration' },
+        { icon: FiServer, text: 'Server Management & Optimization' },
+        { icon: FiShield, text: 'Cloud Security & Compliance' },
+        { icon: FiZap, text: 'Auto-Scaling & Load Balancing' },
+        { icon: FiDatabase, text: 'Cloud Database Solutions' },
+        { icon: FiLayers, text: 'Multi-Cloud Architecture' },
+        { icon: FiTrendingUp, text: 'Performance Monitoring & Analytics' },
+        { icon: FiCheckCircle, text: 'Disaster Recovery & Backup' },
+    ];
+
     return (
         <div className="service-page">
-            {/* Breadcrumb Navbar */}
-            <nav className="service-breadcrumb">
+            <section className="service-hero">
                 <div className="container">
-                    <div className="breadcrumb-content">
-                        <div className="breadcrumb-links">
-                            <Link to="/">Home</Link>
-                            <span className="breadcrumb-separator">/</span>
-                            <Link to="/services">Services</Link>
-                            <span className="breadcrumb-separator">/</span>
-                        </div>
-                        <div className="breadcrumb-active">
-                            <span>Cloud Services</span>
-                        </div>
-                        <div className="breadcrumb-actions">
-                            <Link to="/login" className="breadcrumb-link">Login</Link>
-                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
-                        </div>
-                    </div>
+                    <h1 className="service-title">CLOUD <span className="highlight">SERVICES</span> SOLUTIONS</h1>
+                    <p className="service-subtitle">
+                        Scalable cloud infrastructure and services to power your business growth.
+                    </p>
                 </div>
-            </nav>
+            </section>
 
-            {/* Hero Section */}
-            <section className="service-hero-modern">
-                <div className="service-hero-background">
-                    <div className="bg-element bg-table"></div>
-                    <div className="bg-element bg-chart"></div>
-                    <div className="bg-element bg-graph"></div>
-                    <div className="bg-element bg-logo bg-logo-1">GONG</div>
-                    <div className="bg-element bg-logo bg-logo-2">HubSpot</div>
-                    <div className="bg-element bg-logo bg-logo-3">INTERCOM</div>
-                    <div className="bg-element bg-logo bg-logo-4">asana</div>
-                    <div className="bg-element bg-text bg-text-1">Visitors</div>
-                    <div className="bg-element bg-text bg-text-2">Companies</div>
-                    <div className="bg-element bg-text bg-text-3">Platform</div>
-                    <div className="bg-element bg-text bg-text-4">Customers</div>
-                    <div className="bg-element bg-text bg-text-5">Company</div>
-                    <div className="bg-element bg-text bg-text-6">Resources</div>
-                </div>
+            <section className="service-content-modern">
                 <div className="container">
-                    <div className="service-hero-content">
-                        <div className="service-hero-left">
-                            <h1 className="service-title-modern">
-                                CLOUD<br />
-                                SERVICES<br />
-                                <span className="highlight-modern">SOLUTION</span>
-                            </h1>
-                            <p className="service-faint-text">
-                                Clearbit gives you full co and company in your target marke more reach and convert more cus predictably.
+                    <div className="service-content-wrapper">
+                        <div className="service-content-left">
+                            <h2 className="service-subheading">Power Your Business with Cloud Solutions</h2>
+                            <div className="service-divider"></div>
+                            <p className="service-description-text">
+                                At Tekynerds, we specialize in providing scalable cloud infrastructure and services to power your business growth. 
+                                Our cloud solutions empower businesses of all sizes to leverage the power of cloud computing for better scalability, 
+                                security, and cost-efficiency.
                             </p>
+                            <h3 className="service-features-title">Our Cloud Solutions:</h3>
+                            <ul className="service-features-modern">
+                                {expertise.map((item, index) => {
+                                    const Icon = item.icon;
+                                    return (
+                                        <li key={index} className="service-feature-item">
+                                            <div className="feature-icon-wrapper">
+                                                <Icon className="feature-icon" />
+                                            </div>
+                                            <span>{item.text}</span>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                            <Link to="/contact" className="service-cta-modern">
+                                Get Started
+                            </Link>
                         </div>
-                        <div className="service-hero-right">
-                            <p className="service-description">
-                                At Tekynerds, We Specialize In Providing Scalable Cloud Infrastructure And Services To Power Your Business Growth. Our Cloud Solutions Empower Businesses Of All Sizes To Leverage The Power Of Cloud Computing For Better Scalability, Security, And Cost-Efficiency.
-                            </p>
+                        <div className="service-content-right">
+                            <div className="cloud-showcase">
+                                <div className="cloud-infrastructure">
+                                    <div className="cloud-server server-1">
+                                        <div className="server-icon"></div>
+                                        <div className="server-label">Server</div>
+                                    </div>
+                                    <div className="cloud-server server-2">
+                                        <div className="server-icon"></div>
+                                        <div className="server-label">Database</div>
+                                    </div>
+                                    <div className="cloud-server server-3">
+                                        <div className="server-icon"></div>
+                                        <div className="server-label">Storage</div>
+                                    </div>
+                                    <div className="cloud-connections">
+                                        <div className="connection-line line-1"></div>
+                                        <div className="connection-line line-2"></div>
+                                        <div className="connection-line line-3"></div>
+                                    </div>
+                                </div>
+                                <div className="tech-badge badge-1">AWS</div>
+                                <div className="tech-badge badge-2">Azure</div>
+                                <div className="tech-badge badge-3">GCP</div>
+                                <div className="tech-badge badge-4">Docker</div>
+                            </div>
                         </div>
                     </div>
                 </div>

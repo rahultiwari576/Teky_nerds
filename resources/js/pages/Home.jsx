@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiZap, FiUsers, FiSmartphone, FiMonitor, FiGlobe, FiCheckCircle, FiCode, FiLayers, FiTrendingUp, FiShield, FiMessageSquare } from 'react-icons/fi';
+import { FiArrowRight, FiZap, FiUsers, FiSmartphone, FiMonitor, FiGlobe, FiCheckCircle, FiCode, FiLayers, FiTrendingUp, FiShield, FiMessageSquare, FiPackage, FiCloud, FiImage, FiShoppingBag, FiTablet, FiBox, FiServer } from 'react-icons/fi';
 import './Home.css';
 
 const Home = () => {
@@ -12,12 +12,12 @@ const Home = () => {
     ];
 
     const services = [
-        { title: 'Web Design', path: '/services/web-design', icon: '🎨', description: 'Creating stunning, user-friendly websites that captivate your audience.' },
-        { title: 'Web Development', path: '/services/web-development', icon: '💻', description: 'Building robust, scalable web applications using cutting-edge technologies.' },
-        { title: 'Mobile App', path: '/services/mobile-applications', icon: '📱', description: 'Native and cross-platform mobile apps that deliver exceptional experiences.' },
-        { title: 'Inventory Management', path: '/services/inventory-management', icon: '📦', description: 'Streamline your inventory operations with intelligent management systems.' },
-        { title: 'Cloud Solutions', path: '/services/cloud-services', icon: '☁️', description: 'Scalable cloud infrastructure and services to power your business growth.' },
-        { title: 'Digital Marketing', path: '/services/digital-marketing', icon: '📈', description: 'Boost your online presence with strategic digital marketing campaigns.' },
+        { title: 'Web Design', path: '/services/web-design', icon: FiImage, description: 'CREATING STUNNING, USER-FRIENDLY WEBSITES THAT CAPTIVATE YOUR AUDIENCE.' },
+        { title: 'Web Development', path: '/services/web-development', icon: FiCode, description: 'BUILDING ROBUST, SCALABLE WEB APPLICATIONS USING CUTTING-EDGE TECHNOLOGIES.' },
+        { title: 'Mobile App', path: '/services/mobile-applications', icon: FiTablet, description: 'NATIVE AND CROSS-PLATFORM MOBILE APPS THAT DELIVER EXCEPTIONAL EXPERIENCES.' },
+        { title: 'Inventory Management', path: '/services/inventory-management', icon: FiPackage, description: 'STREAMLINING YOUR INVENTORY OPERATIONS WITH INTELLIGENT MANAGEMENT SYSTEMS.' },
+        { title: 'Cloud Solutions', path: '/services/cloud-services', icon: FiCloud, description: 'SCALABLE CLOUD INFRASTRUCTURE AND SERVICES TO POWER YOUR BUSINESS GROWTH.' },
+        { title: 'Digital Marketing', path: '/services/digital-marketing', icon: FiShoppingBag, description: 'BOOSTING YOUR ONLINE PRESENCE WITH STRATEGIC DIGITAL MARKETING CAMPAIGNS.' },
     ];
 
     const industries = [
@@ -102,21 +102,21 @@ const Home = () => {
                                                 <FiCode className="card-icon" />
                                                 <div className="card-content">
                                                     <div className="card-title">Web Dev</div>
-                                                    <div className="card-stats">+24%</div>
+                                                    <div className="card-stats">78%</div>
                                                 </div>
                                             </div>
                                             <div className="product-card">
                                                 <FiLayers className="card-icon" />
                                                 <div className="card-content">
                                                     <div className="card-title">Design</div>
-                                                    <div className="card-stats">+18%</div>
+                                                    <div className="card-stats">82%</div>
                                                 </div>
                                             </div>
                                             <div className="product-card">
                                                 <FiTrendingUp className="card-icon" />
                                                 <div className="card-content">
                                                     <div className="card-title">Growth</div>
-                                                    <div className="card-stats">+32%</div>
+                                                    <div className="card-stats">36%</div>
                                                 </div>
                                             </div>
                                             <div className="product-card">
@@ -138,23 +138,27 @@ const Home = () => {
             {/* Services Section */}
             <section className="services-section">
                 <div className="container">
-                    <h2 className="section-title">
-                        OUR <span className="highlight">SERVICES</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        Comprehensive digital solutions to transform your business
-                    </p>
+                    <div className="services-header">
+                        <h2 className="services-title">
+                            OUR <span className="highlight">SERVICES</span>
+                        </h2>
+                        <p className="services-subtitle">
+                            Comprehensive digital solutions to transform your business
+                        </p>
+                    </div>
                     <div className="services-grid">
-                        {services.map((service, index) => (
-                            <Link key={index} to={service.path} className="service-card">
-                                <div className="service-icon">{service.icon}</div>
-                                <h3 className="service-card-title">{service.title}</h3>
-                                <p className="service-card-description">{service.description}</p>
-                                <span className="service-link">
-                                    Learn More <FiArrowRight />
-                                </span>
-                            </Link>
-                        ))}
+                        {services.map((service, index) => {
+                            const Icon = service.icon;
+                            return (
+                                <Link key={index} to={service.path} className="service-card">
+                                    <div className="service-icon-wrapper">
+                                        <Icon className="service-icon" />
+                                    </div>
+                                    <h3 className="service-card-title">{service.title.toUpperCase()}</h3>
+                                    <p className="service-card-description">{service.description}</p>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

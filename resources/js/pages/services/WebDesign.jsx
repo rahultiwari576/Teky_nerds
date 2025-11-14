@@ -56,14 +56,56 @@ const WebDesign = () => {
                             </Link>
                         </div>
                         <div className="service-content-right">
-                            <div className="service-visual-element">
-                                <div className="visual-gradient-blob blob-1"></div>
-                                <div className="visual-gradient-blob blob-2"></div>
-                                <div className="visual-gradient-blob blob-3"></div>
-                                <div className="visual-illustration">
-                                    <div className="illustration-card card-1"></div>
-                                    <div className="illustration-card card-2"></div>
-                                    <div className="illustration-card card-3"></div>
+                            <div className="design-showcase">
+                                <div className="design-browser browser-1">
+                                    <div className="browser-header">
+                                        <div className="browser-dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div className="browser-url-bar"></div>
+                                    </div>
+                                    <div className="browser-content">
+                                        <div className="design-elements">
+                                            <div className="design-element element-1"></div>
+                                            <div className="design-element element-2"></div>
+                                            <div className="design-element element-3"></div>
+                                            <div className="design-element element-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="design-browser browser-2">
+                                    <div className="browser-header">
+                                        <div className="browser-dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div className="browser-url-bar"></div>
+                                    </div>
+                                    <div className="browser-content">
+                                        <div className="design-layout">
+                                            <div className="layout-header"></div>
+                                            <div className="layout-body">
+                                                <div className="layout-sidebar"></div>
+                                                <div className="layout-main">
+                                                    <div className="layout-card"></div>
+                                                    <div className="layout-card"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="design-tools">
+                                    <div className="tool tool-palette"></div>
+                                    <div className="tool tool-brush"></div>
+                                    <div className="tool tool-code"></div>
+                                </div>
+                                <div className="floating-shapes">
+                                    <div className="shape shape-circle"></div>
+                                    <div className="shape shape-square"></div>
+                                    <div className="shape shape-triangle"></div>
                                 </div>
                             </div>
                         </div>

@@ -42,24 +42,46 @@
     align-items: center;
     gap: 0.6rem;
     font-weight: bold;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 0;
+    padding-left: 0;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.logo-text {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 1.25rem;
-    transition: transform 0.3s ease;
+    font-weight: 700;
     text-transform: uppercase;
-    flex-shrink: 0;
-    margin-left: 0;
-    padding-left: 0;
+    line-height: 1.2;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.logo-tagline {
+    font-size: 0.65rem;
+    color: #9ca3af;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
 }
 
 @supports not (-webkit-background-clip: text) {
-    .logo {
+    .logo-text {
         color: #667eea;
         background: none;
     }
@@ -85,10 +107,6 @@
 .logo:hover .logo-icon svg {
     transform: scale(1.05);
     filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.5));
-}
-
-.logo-text {
-    font-weight: 700;
 }
 
 .nav {
@@ -261,10 +279,42 @@
     margin-bottom: 1rem;
 }
 
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-logo-text .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.footer-logo-text .logo-tagline {
+    font-size: 0.85rem;
+    color: #999;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+@supports not (-webkit-background-clip: text) {
+    .footer-logo-text .logo-text {
+        color: #667eea;
+        background: none;
+    }
+}
+
 .footer-description {
     color: #ccc;
     line-height: 1.6;
     font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
 .footer-links {
@@ -345,6 +395,18 @@
 
     .header .container {
         padding: 0.6rem 1.5rem;
+    }
+
+    .logo-text-wrapper {
+        gap: 0.05rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .logo-tagline {
+        font-size: 0.6rem;
     }
 
     .mobile-menu-toggle {

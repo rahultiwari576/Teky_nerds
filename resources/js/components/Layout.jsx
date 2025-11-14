@@ -62,7 +62,10 @@ const Layout = ({ children }) => {
                                 </defs>
                             </svg>
                         </div>
-                        <span className="logo-text">TEKYNERDS</span>
+                        <div className="logo-text-wrapper">
+                            <span className="logo-text">TEKYNERDS</span>
+                            <span className="logo-tagline">nerds of tech</span>
+                        </div>
                     </Link>
                     <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
                         {navItems.map((item, index) => {
@@ -141,10 +144,13 @@ const Layout = ({ children }) => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <span className="logo-text">TEKYNERDS WE BUILD WEB</span>
+                                <div className="footer-logo-text">
+                                    <span className="logo-text">TEKYNERDS</span>
+                                    <span className="logo-tagline">nerds of tech</span>
+                                </div>
                             </div>
                             <p className="footer-description">
-                                Tekynerds is a dynamic and innovative web development company with a strong focus on delivering high-quality websites that make a significant impact on our clients businesses.
+                                We are a premier web development agency specializing in creating cutting-edge digital solutions that drive business growth. Our expert team combines innovative technology with strategic design to deliver exceptional results that exceed client expectations.
                             </p>
                         </div>
                         <div className="footer-section">
