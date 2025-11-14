@@ -1,214 +1,192 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiCalendar, FiTarget, FiEye, FiUsers, FiAward, FiTrendingUp } from 'react-icons/fi';
 import './About.css';
 
 const About = () => {
-    const heroRef = useRef(null);
-    const canvasRef = useRef(null);
+    const timeline = [
+        { year: '2022', title: 'Company Founded', description: 'Tekynerds was established with a vision to transform businesses through innovative web solutions.' },
+        { year: '2023', title: 'First Major Client', description: 'Secured our first enterprise client and delivered a groundbreaking web application.' },
+        { year: '2024', title: 'Global Expansion', description: 'Expanded our services to serve clients across 15+ countries worldwide.' },
+        { year: '2024', title: 'Award Recognition', description: 'Received recognition for excellence in web development and digital innovation.' },
+    ];
 
-    useEffect(() => {
-        const hero = heroRef.current;
-        const canvas = canvasRef.current;
-        
-        if (!hero || !canvas) return;
+    const team = [
+        { name: 'Rahul Tiwari', role: 'CEO & Founder', image: '/rahul-tiwari.jpg', bio: 'Visionary leader with 10+ years of experience in web development.' },
+        { name: 'John Doe', role: 'CTO', image: '', bio: 'Tech expert specializing in cutting-edge web technologies.' },
+        { name: 'Mike Johnson', role: 'Senior Developer', image: '', bio: 'Full-stack developer passionate about building scalable solutions.' },
+    ];
 
-        const ctx = canvas.getContext('2d');
-        let animationId;
-        let particles = [];
-        const particleCount = 50;
+    const achievements = [
+        { number: '100+', label: 'Projects Completed', icon: FiTrendingUp },
+        { number: '50+', label: 'Happy Clients', icon: FiUsers },
+        { number: '15+', label: 'Countries Served', icon: FiAward },
+        { number: '5+', label: 'Years Experience', icon: FiCalendar },
+    ];
 
-        // Set canvas size
-        const resizeCanvas = () => {
-            canvas.width = hero.offsetWidth;
-            canvas.height = hero.offsetHeight;
-        };
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        // Create particles
-        for (let i = 0; i < particleCount; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 3 + 1,
-                speedX: (Math.random() - 0.5) * 0.5,
-                speedY: (Math.random() - 0.5) * 0.5,
-                opacity: Math.random() * 0.5 + 0.2
-            });
-        }
-
-        // Mouse interaction
-        let mouseX = canvas.width / 2;
-        let mouseY = canvas.height / 2;
-
-        const handleMouseMove = (e) => {
-            const rect = canvas.getBoundingClientRect();
-            mouseX = e.clientX - rect.left;
-            mouseY = e.clientY - rect.top;
-        };
-
-        canvas.addEventListener('mousemove', handleMouseMove);
-
-        // Animation loop
-        const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Update and draw particles
-            particles.forEach((particle, i) => {
-                particle.x += particle.speedX;
-                particle.y += particle.speedY;
-
-                // Bounce off edges
-                if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
-                if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
-
-                // Mouse interaction
-                const dx = mouseX - particle.x;
-                const dy = mouseY - particle.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 100) {
-                    particle.x -= dx * 0.01;
-                    particle.y -= dy * 0.01;
-                }
-
-                // Draw particle
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
-                ctx.fill();
-
-                // Draw connections
-                particles.slice(i + 1).forEach(otherParticle => {
-                    const dx = particle.x - otherParticle.x;
-                    const dy = particle.y - otherParticle.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 150) {
-                        ctx.beginPath();
-                        ctx.moveTo(particle.x, particle.y);
-                        ctx.lineTo(otherParticle.x, otherParticle.y);
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 * (1 - distance / 150)})`;
-                        ctx.lineWidth = 1;
-                        ctx.stroke();
-                    }
-                });
-            });
-
-            animationId = requestAnimationFrame(animate);
-        };
-
-        animate();
-
-        return () => {
-            window.removeEventListener('resize', resizeCanvas);
-            canvas.removeEventListener('mousemove', handleMouseMove);
-            cancelAnimationFrame(animationId);
-        };
-    }, []);
+    const partners = ['GONG', 'HubSpot', 'Clearbit', 'INTERCOM', 'Asana'];
 
     return (
         <div className="about-page">
-            <section className="about-hero" ref={heroRef}>
-                <canvas ref={canvasRef} className="hero-canvas"></canvas>
-                <div className="hero-3d-shapes">
-                    <div className="shape shape-1"></div>
-                    <div className="shape shape-2"></div>
-                    <div className="shape shape-3"></div>
+            {/* Hero Banner Section */}
+            <section className="about-hero">
+                <div className="hero-background-elements">
+                    <div className="bg-element">grow here</div>
+                    <div className="bg-element">person</div>
+                    <div className="bg-element">you can</div>
+                    <div className="bg-element">target market</div>
+                    <div className="bg-element">more</div>
+                    <div className="bg-element">Platform</div>
+                    <div className="bg-element social">f</div>
                 </div>
-                <div className="container hero-content-wrapper">
-                    <div className="hero-text-content">
-                        <h1 className="page-title">
-                            ABOUT <span className="highlight">TEKYNERDS</span>
-                        </h1>
-                    <p className="page-subtitle">
-                        We're passionate about creating digital solutions that make a difference.
-                    </p>
+                <div className="container">
+                    <div className="breadcrumb">
+                        <Link to="/" className="breadcrumb-link">Home</Link>
+                        <span className="breadcrumb-separator">/</span>
+                        <span className="breadcrumb-active">About</span>
+                    </div>
+                    <div className="hero-content">
+                        <div className="hero-left">
+                            <h1 className="hero-title">
+                                WE BUILD BRIDGES BETWEEN <span className="highlight">COMPANIES AND CUSTOMERS</span>
+                            </h1>
+                        </div>
+                        <div className="hero-right">
+                            <p className="hero-description">
+                                To Build Software That Gives Customer-Facing Teams At Small And Medium Sized Business The Ability To Create Fruitful And Enduring Relationships With Customers.
+                            </p>
+                            <div className="partners-section">
+                                <div className="partners-label">Our Partners</div>
+                                <div className="partners-logos">
+                                    {partners.map((partner, index) => (
+                                        <div key={index} className="partner-logo">{partner}</div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="about-content">
+            {/* Mission & Vision Section */}
+            <section className="mission-vision-section">
                 <div className="container">
-                    <div className="who-we-are-section">
-                        <div className="who-we-are-header">
-                            <h2 className="section-title">Who We Are</h2>
-                            <div className="title-underline"></div>
+                    <div className="mission-vision-grid">
+                        <div className="mission-card">
+                            <div className="card-icon-wrapper">
+                                <FiTarget className="card-icon" />
+                            </div>
+                            <h2>Our Mission</h2>
+                            <p>
+                                Our mission is to provide top-tier digital solutions that truly resonate with forward-thinking 
+                                businesses. We're dedicated to enhancing user experiences and achieving important business 
+                                objectives through innovative technology and creative design.
+                            </p>
                         </div>
-                        <div className="who-we-are-content">
-                            <div className="who-we-are-text">
-                                <p className="lead-text">
-                                    Tekynerds is a dynamic and innovative web development company with a strong focus on 
-                            delivering high-quality websites that make a significant impact on our clients' businesses. 
-                                </p>
-                                <p>
-                            Our team is passionate about leveraging the latest technologies and design trends to create 
-                                    bespoke web solutions that not only meet but exceed our clients' expectations. We combine 
-                                    technical expertise with creative vision to transform ideas into powerful digital experiences.
-                                </p>
-                                <p>
-                                    With a commitment to excellence and innovation, we've helped numerous businesses establish 
-                                    their online presence and achieve their digital goals. Our approach is collaborative, 
-                                    transparent, and results-driven.
-                                </p>
+                        <div className="vision-card">
+                            <div className="card-icon-wrapper">
+                                <FiEye className="card-icon" />
                             </div>
-                            <div className="who-we-are-cards">
-                                <div className="glass-card">
-                                    <div className="card-icon">🚀</div>
-                                    <h3>Innovation First</h3>
-                                    <p>We stay ahead of the curve with cutting-edge technologies and modern design practices.</p>
-                                </div>
-                                <div className="glass-card">
-                                    <div className="card-icon">✨</div>
-                                    <h3>Quality Focus</h3>
-                                    <p>Every project undergoes rigorous quality assurance to ensure flawless delivery.</p>
-                                </div>
-                                <div className="glass-card">
-                                    <div className="card-icon">🌍</div>
-                                    <h3>Global Reach</h3>
-                                    <p>Serving clients worldwide with scalable solutions that grow with their business.</p>
-                                </div>
-                            </div>
+                            <h2>Our Vision</h2>
+                            <p>
+                                To become a globally recognized leader in web development, known for our innovative solutions, 
+                                exceptional service quality, and commitment to helping businesses achieve their digital transformation goals.
+                            </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="about-section">
-                        <h2>Our Mission</h2>
-                        <p>
-                            Our mission is to provide top-tier digital solutions that truly resonate with forward-thinking 
-                            businesses. We're dedicated to enhancing user experiences and achieving important business 
-                            objectives through innovative technology and creative design.
-                        </p>
+            {/* Company Story Timeline */}
+            <section className="timeline-section">
+                <div className="container">
+                    <h2 className="section-title">Our Story</h2>
+                    <div className="timeline">
+                        {timeline.map((item, index) => (
+                            <div key={index} className="timeline-item">
+                                <div className="timeline-year">{item.year}</div>
+                                <div className="timeline-content">
+                                    <h3>{item.title}</h3>
+                                    <p>{item.description}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
+                </div>
+            </section>
 
-                    <div className="about-section">
-                        <h2>Why Choose Us</h2>
-                        <div className="features-grid">
-                            <div className="feature-card">
-                                <h3>Expert Team</h3>
-                                <p>Our talented squad brings years of experience and expertise to every project.</p>
-                            </div>
-                            <div className="feature-card">
-                                <h3>Quality Assurance</h3>
-                                <p>100% project delivery rate with rigorous testing and quality checks.</p>
-                            </div>
-                            <div className="feature-card">
-                                <h3>Client Satisfaction</h3>
-                                <p>100% client satisfaction rate with dedicated support and communication.</p>
-                            </div>
-                            <div className="feature-card">
-                                <h3>Global Reach</h3>
-                                <p>Serving clients across 15+ countries with reliable and efficient solutions.</p>
-                            </div>
+            {/* Who We Are Section */}
+            <section className="who-we-are-section">
+                <div className="container">
+                    <div className="who-we-are-header">
+                        <div className="section-left">
+                            <h2 className="section-title-large">Together We Are Strong</h2>
+                        </div>
+                        <div className="section-right">
+                            <h3 className="section-subtitle">
+                                Our crew is always getting bigger, and we all share one big dream to help your business reach a level of success it's never seen before, right at the very top.
+                            </h3>
+                            <p>
+                                Tekynerds is like the brainchild of Rahul Tiwari, born in 2022. We're not just your run-of-the-mill web development company, we're more like digital architects with a global twist. Hailing from the heart of India, our crew defies distance by collaborating with businesses worldwide. We combine technical expertise with creative vision to transform ideas into powerful digital experiences.
+                            </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="about-cta">
-                        <h2>Ready to Start Your Project?</h2>
-                        <Link to="/contact" className="cta-button">
-                            Get In Touch
-                        </Link>
+            {/* Team Section */}
+            <section className="team-section">
+                <div className="container">
+                    <h2 className="section-title">Meet Our Team</h2>
+                    <div className="team-grid">
+                        {team.map((member, index) => (
+                            <div key={index} className="team-card">
+                                <div className="team-image-wrapper">
+                                    {member.image ? (
+                                        <img src={member.image} alt={member.name} className="team-image" />
+                                    ) : (
+                                        <div className="team-placeholder">
+                                            <FiUsers className="placeholder-icon" />
+                                        </div>
+                                    )}
+                                </div>
+                                <h3 className="team-name">{member.name}</h3>
+                                <p className="team-role">{member.role}</p>
+                                <p className="team-bio">{member.bio}</p>
+                            </div>
+                        ))}
                     </div>
+                </div>
+            </section>
+
+            {/* Achievements & Numbers Section */}
+            <section className="achievements-section">
+                <div className="container">
+                    <h2 className="section-title">Our Achievements</h2>
+                    <div className="achievements-grid">
+                        {achievements.map((achievement, index) => {
+                            const Icon = achievement.icon;
+                            return (
+                                <div key={index} className="achievement-card">
+                                    <div className="achievement-icon-wrapper">
+                                        <Icon className="achievement-icon" />
+                                    </div>
+                                    <div className="achievement-number">{achievement.number}</div>
+                                    <div className="achievement-label">{achievement.label}</div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="about-cta">
+                <div className="container">
+                    <h2>Ready to Start Your Project?</h2>
+                    <Link to="/contact" className="cta-button">
+                        Get In Touch
+                    </Link>
                 </div>
             </section>
         </div>
