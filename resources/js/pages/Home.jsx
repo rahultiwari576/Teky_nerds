@@ -76,14 +76,6 @@ const Home = () => {
                                     <span>Performance Marketing</span>
                                 </div>
                             </div>
-                            <div className="hero-cta-group">
-                                <Link to="/contact" className="cta-button primary">
-                                    Get a Quote
-                                </Link>
-                                <Link to="/contact" className="cta-button secondary">
-                                    Start Your Project
-                                </Link>
-                            </div>
                         </div>
                         <div className="hero-image">
                             <div className="laptop-mockup">
@@ -129,6 +121,14 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="hero-cta-group">
+                                <Link to="/contact" className="cta-button primary">
+                                    Get a Quote
+                                </Link>
+                                <Link to="/contact" className="cta-button secondary">
+                                    Start Your Project
+                                </Link>
                             </div>
                         </div>
                     </div>

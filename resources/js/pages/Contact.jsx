@@ -97,7 +97,7 @@ const Contact = () => {
                                     <FiPhone className="contact-icon" />
                                     <div>
                                         <h3>Phone</h3>
-                                        <p>+1 (555) 123-4567</p>
+                                        <p>+91- 7900167247</p>
                                     </div>
                                 </div>
                                 <div className="contact-detail-item">
@@ -152,7 +152,7 @@ const Contact = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="+1 (555) 123-4567"
+                                        placeholder="+91- 7900167247"
                                     />
                                 </div>
 
