@@ -362,55 +362,53 @@
 
 /* Modern Service Content Section */
 .service-hero {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
-    padding: 6rem 0 4rem;
+    background: #F0F8FF;
+    padding: 10rem 0 7rem;
     text-align: center;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
-    animation: float 20s ease-in-out infinite;
+    display: none;
 }
 
 .service-title {
-    font-size: 4.5rem;
-    font-weight: 900;
-    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
     line-height: 1.1;
     color: #1a1a1a;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
 }
 
 .service-title .highlight {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #5e61e6;
     position: relative;
     display: inline-block;
+    padding-bottom: 5px;
 }
 
 .service-title .highlight::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 3px;
+    background: #5e61e6;
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 @supports not (-webkit-background-clip: text) {
@@ -421,13 +419,14 @@
 }
 
 .service-subtitle {
-    font-size: 1.3rem;
-    color: #4a5568;
-    max-width: 800px;
+    font-size: 1.15rem;
+    color: #64748b;
+    max-width: 700px;
     margin: 0 auto;
-    line-height: 1.7;
+    line-height: 1.6;
     position: relative;
     z-index: 1;
+    font-weight: 500;
 }
 
 .service-content-modern {
@@ -506,14 +505,37 @@
     animation-fill-mode: both;
 }
 
-.service-feature-item:nth-child(1) { animation-delay: 0.1s; }
-.service-feature-item:nth-child(2) { animation-delay: 0.2s; }
-.service-feature-item:nth-child(3) { animation-delay: 0.3s; }
-.service-feature-item:nth-child(4) { animation-delay: 0.4s; }
-.service-feature-item:nth-child(5) { animation-delay: 0.5s; }
-.service-feature-item:nth-child(6) { animation-delay: 0.6s; }
-.service-feature-item:nth-child(7) { animation-delay: 0.7s; }
-.service-feature-item:nth-child(8) { animation-delay: 0.8s; }
+.service-feature-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-feature-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-feature-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-feature-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.service-feature-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.service-feature-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.service-feature-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.service-feature-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
 
 .service-feature-item:hover {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
@@ -918,28 +940,37 @@
 
 /* Animations */
 @keyframes browserFloat1 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(-8deg);
     }
+
     50% {
         transform: translateY(-15px) rotate(-8deg);
     }
 }
 
 @keyframes browserFloat2 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(6deg);
     }
+
     50% {
         transform: translateY(-15px) rotate(6deg);
     }
 }
 
 @keyframes urlPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: translateY(-50%) scaleX(1);
     }
+
     50% {
         opacity: 1;
         transform: translateY(-50%) scaleX(1.1);
@@ -947,10 +978,13 @@
 }
 
 @keyframes elementGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.7;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
@@ -958,19 +992,25 @@
 }
 
 @keyframes headerPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.9;
     }
+
     50% {
         opacity: 1;
     }
 }
 
 @keyframes cardShimmer {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: translateX(0);
     }
+
     50% {
         opacity: 1;
         transform: translateX(5px);
@@ -978,23 +1018,30 @@
 }
 
 @keyframes toolFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) scale(1);
     }
+
     50% {
         transform: translateY(-20px) scale(1.1);
     }
 }
 
 @keyframes shapeFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) rotate(0deg);
         opacity: 0.1;
     }
+
     33% {
         transform: translate(30px, -30px) rotate(120deg);
         opacity: 0.15;
     }
+
     66% {
         transform: translate(-20px, 20px) rotate(240deg);
         opacity: 0.1;
@@ -1002,12 +1049,16 @@
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) rotate(0deg);
     }
+
     33% {
         transform: translate(30px, -30px) rotate(120deg);
     }
+
     66% {
         transform: translate(-20px, 20px) rotate(240deg);
     }
@@ -1018,6 +1069,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1029,6 +1081,7 @@
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1036,21 +1089,28 @@
 }
 
 @keyframes floatBlob {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
     }
+
     33% {
         transform: translate(30px, -30px) scale(1.1);
     }
+
     66% {
         transform: translate(-20px, 20px) scale(0.9);
     }
 }
 
 @keyframes floatCard {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(var(--rotation, 0deg));
     }
+
     50% {
         transform: translateY(-20px) rotate(var(--rotation, 0deg));
     }
@@ -1314,18 +1374,24 @@
 }
 
 @keyframes floatCode {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-15px) rotate(2deg);
     }
 }
 
 @keyframes floatBadge {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) scale(1);
     }
+
     50% {
         transform: translateY(-10px) scale(1.05);
     }
@@ -1526,19 +1592,25 @@
 }
 
 @keyframes floatPhone {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-20px) rotate(3deg);
     }
 }
 
 @keyframes pulseFeature {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1);
     }
+
     50% {
         opacity: 0.7;
         transform: scale(0.98);
@@ -1722,9 +1794,12 @@
 }
 
 @keyframes floatDashboard {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-15px) rotate(2deg);
     }
@@ -1734,6 +1809,7 @@
     from {
         height: 0;
     }
+
     to {
         height: 100%;
     }
@@ -1945,19 +2021,25 @@
 }
 
 @keyframes floatCloud {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-20px) rotate(5deg);
     }
 }
 
 @keyframes pulseServer {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     }
+
     50% {
         transform: scale(1.05);
         box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
@@ -1969,10 +2051,13 @@
 }
 
 @keyframes floatServer3 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(-50%) translateY(0) scale(1);
         box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     }
+
     50% {
         transform: translateX(-50%) translateY(-10px) scale(1.05);
         box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
@@ -1980,10 +2065,13 @@
 }
 
 @keyframes pulseLine {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
         width: 100%;
     }
+
     50% {
         opacity: 0.6;
         width: 110%;
@@ -2079,7 +2167,7 @@
         margin: 1rem;
         animation: none;
     }
-    
+
     .server-3 {
         transform: none;
     }

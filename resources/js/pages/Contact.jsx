@@ -98,7 +98,7 @@ const Contact = () => {
                                     <FiMessageSquare className="contact-icon" />
                                     <div>
                                         <h3>Locations</h3>
-                                        <p>USA, Canada, Germany, Australia, Switzerland, Ireland</p>
+                                        <p>USA, Canada, Germany, Australia, Switzerland, Ireland,India,Europe</p>
                                     </div>
                                 </div>
                             </div>

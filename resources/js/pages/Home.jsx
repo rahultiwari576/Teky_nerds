@@ -5,10 +5,10 @@ import './Home.css';
 
 const Home = () => {
     const stats = [
-        { icon: FiZap, number: '2+', label: 'Years Experience', suffix: ' Years' },
-        { icon: FiCheckCircle, number: '100%', label: 'Project Delivery', suffix: '%' },
-        { icon: FiGlobe, number: '3+', label: 'Countries Served', suffix: '+' },
-        { icon: FiSmartphone, number: '10+', label: 'Apps Developed', suffix: '+' },
+        { icon: FiZap, number: '2', label: 'Years Experience', suffix: '+ Years' },
+        { icon: FiCheckCircle, number: '100', label: 'Project Delivery', suffix: '%' },
+        { icon: FiGlobe, number: '3', label: 'Countries Served', suffix: '+' },
+        { icon: FiSmartphone, number: '10', label: 'Apps Developed', suffix: '+' },
     ];
 
     const services = [
@@ -57,10 +57,10 @@ const Home = () => {
                                 <span className="badge-company">Strategy First</span>
                             </div>
                             <h1 className="hero-title">
-                                Elevate Your Brand with <span className="highlight">Strategic</span> Web Development & Marketing
+                                Web Development, <span className="highlight">Software Solutions</span> & Digital Growth for Forward-Thinking Brands
                             </h1>
                             <p className="hero-description">
-                                We craft high-performance websites and implement data-driven marketing strategies that drive growth. From responsive web development to conversion-focused digital campaigns, we transform your online presence into a powerful business asset.
+                                Custom Websites, Scalable Apps, Modern UI/UX — Built for Performance & Growth.
                             </p>
                             <div className="hero-features">
                                 <div className="hero-feature-item">
@@ -124,11 +124,11 @@ const Home = () => {
                             </div>
                             <div className="hero-cta-group">
                                 <Link to="/contact" className="cta-button primary">
-                                    Get a Quote
+                                    Get a Free Consultation
                                 </Link>
-                                <Link to="/contact" className="cta-button secondary">
-                                    Start Your Project
-                                </Link>
+                                <a href="#portfolio" className="cta-button secondary">
+                                    View Our Portfolio
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@ const Home = () => {
                                 EXPERIENCE <span className="highlight">WORLD-CLASS AGILE</span> PRODUCT DEVELOPMENT
                             </h2>
                             <p className="experience-text">
-                                Harness digitized business solutions comprising web, Android, and iOS app solutions 
+                                Harness digitized business solutions comprising web, Android, and iOS app solutions
                                 leveraging React, Vue.js, Node.js, and modern web technologies for your startup or enterprise.
                             </p>
                             <p className="experience-text">
@@ -227,7 +227,7 @@ const Home = () => {
                     </p>
                     <div className="industries-grid">
                         {industries.map((industry) => (
-                            <div 
+                            <div
                                 key={industry.id}
                                 className="industry-card"
                                 onMouseEnter={() => setSelectedIndustry(industry.id)}
@@ -250,25 +250,25 @@ const Home = () => {
                         We use the latest trending and reliable technologies to develop your project.
                     </p>
                     <div className="tech-categories">
-                        <div 
+                        <div
                             className={`tech-category ${activeTechTab === 'frontend' ? 'active' : ''}`}
                             onClick={() => setActiveTechTab('frontend')}
                         >
                             FRONT END
                         </div>
-                        <div 
+                        <div
                             className={`tech-category ${activeTechTab === 'backend' ? 'active' : ''}`}
                             onClick={() => setActiveTechTab('backend')}
                         >
                             BACK END
                         </div>
-                        <div 
+                        <div
                             className={`tech-category ${activeTechTab === 'mobile' ? 'active' : ''}`}
                             onClick={() => setActiveTechTab('mobile')}
                         >
                             MOBILE APPLICATION
                         </div>
-                        <div 
+                        <div
                             className={`tech-category ${activeTechTab === 'cloud' ? 'active' : ''}`}
                             onClick={() => setActiveTechTab('cloud')}
                         >
@@ -336,7 +336,7 @@ const Home = () => {
                         Tekynerds delivered a highly functional website with 99% uptime, timely deliveries, effective communication through Google Meet, chat, and email, all while maintaining reliability and efficiency.
                     </p>
                     <div className="testimonials-carousel">
-                        <button 
+                        <button
                             className="carousel-btn prev"
                             onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
                         >
@@ -344,7 +344,7 @@ const Home = () => {
                         </button>
                         <div className="testimonials-container">
                             {testimonials.map((testimonial, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className={`testimonial-card ${index === currentTestimonial ? 'active' : ''}`}
                                 >
@@ -364,7 +364,7 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        <button 
+                        <button
                             className="carousel-btn next"
                             onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
                         >

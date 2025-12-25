@@ -19,7 +19,7 @@ const MobileApplications = () => {
         <div className="service-page">
             <section className="service-hero">
                 <div className="container">
-                    <h1 className="service-title">MOBILE <span className="highlight">APPLICATIONS</span> DEVELOPMENT</h1>
+                    <h1 className="service-title">MOBILE <span className="highlight">APP</span> SERVICES</h1>
                     <p className="service-subtitle">
                         Native and cross-platform mobile apps that deliver exceptional user experiences.
                     </p>
@@ -33,8 +33,8 @@ const MobileApplications = () => {
                             <h2 className="service-subheading">Build Powerful Mobile Experiences</h2>
                             <div className="service-divider"></div>
                             <p className="service-description-text">
-                                We develop mobile applications for iOS and Android that are intuitive, performant, 
-                                and aligned with your business goals. From concept to launch, we handle every aspect 
+                                We develop mobile applications for iOS and Android that are intuitive, performant,
+                                and aligned with your business goals. From concept to launch, we handle every aspect
                                 of mobile app development.
                             </p>
                             <h3 className="service-features-title">Our Mobile Solutions:</h3>

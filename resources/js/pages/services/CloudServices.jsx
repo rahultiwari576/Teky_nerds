@@ -19,7 +19,7 @@ const CloudServices = () => {
         <div className="service-page">
             <section className="service-hero">
                 <div className="container">
-                    <h1 className="service-title">CLOUD <span className="highlight">SERVICES</span> SOLUTIONS</h1>
+                    <h1 className="service-title">CLOUD <span className="highlight">SOLUTION</span> SERVICES</h1>
                     <p className="service-subtitle">
                         Scalable cloud infrastructure and services to power your business growth.
                     </p>
@@ -33,8 +33,8 @@ const CloudServices = () => {
                             <h2 className="service-subheading">Power Your Business with Cloud Solutions</h2>
                             <div className="service-divider"></div>
                             <p className="service-description-text">
-                                At Tekynerds, we specialize in providing scalable cloud infrastructure and services to power your business growth. 
-                                Our cloud solutions empower businesses of all sizes to leverage the power of cloud computing for better scalability, 
+                                At Tekynerds, we specialize in providing scalable cloud infrastructure and services to power your business growth.
+                                Our cloud solutions empower businesses of all sizes to leverage the power of cloud computing for better scalability,
                                 security, and cost-efficiency.
                             </p>
                             <h3 className="service-features-title">Our Cloud Solutions:</h3>

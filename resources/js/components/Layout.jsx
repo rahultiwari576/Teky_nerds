@@ -51,13 +51,13 @@ const Layout = ({ children }) => {
                     <Link to="/" className="logo">
                         <div className="logo-icon">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="40" height="40" rx="10" fill="url(#logoGradient)"/>
-                                <path d="M12 20L18 14L20 16L28 8L30 10L20 20L18 18L12 24V20Z" fill="white"/>
-                                <path d="M20 22L28 14L30 16L32 14L30 12L20 22Z" fill="white" opacity="0.8"/>
+                                <rect width="40" height="40" rx="10" fill="url(#logoGradient)" />
+                                <path d="M12 20L18 14L20 16L28 8L30 10L20 20L18 18L12 24V20Z" fill="white" />
+                                <path d="M20 22L28 14L30 16L32 14L30 12L20 22Z" fill="white" opacity="0.8" />
                                 <defs>
                                     <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#667eea"/>
-                                        <stop offset="1" stopColor="#764ba2"/>
+                                        <stop stopColor="#00D1FF" />
+                                        <stop offset="1" stopColor="#00A3C6" />
                                     </linearGradient>
                                 </defs>
                             </svg>
@@ -81,12 +81,12 @@ const Layout = ({ children }) => {
                                         {item.label}
                                     </Link>
                                     {index === 1 && (
-                                        <div 
+                                        <div
                                             className="nav-dropdown"
                                             onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
                                             onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
                                         >
-                                            <div 
+                                            <div
                                                 className={`nav-link dropdown-trigger ${isActive('/services') ? 'active' : ''}`}
                                                 onClick={() => isMobile && setServicesDropdownOpen(!servicesDropdownOpen)}
                                             >
@@ -133,13 +133,13 @@ const Layout = ({ children }) => {
                             <div className="footer-logo">
                                 <div className="logo-icon">
                                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="40" height="40" rx="10" fill="url(#footerLogoGradient)"/>
-                                        <path d="M12 20L18 14L20 16L28 8L30 10L20 20L18 18L12 24V20Z" fill="white"/>
-                                        <path d="M20 22L28 14L30 16L32 14L30 12L20 22Z" fill="white" opacity="0.8"/>
+                                        <rect width="40" height="40" rx="10" fill="url(#footerLogoGradient)" />
+                                        <path d="M12 20L18 14L20 16L28 8L30 10L20 20L18 18L12 24V20Z" fill="white" />
+                                        <path d="M20 22L28 14L30 16L32 14L30 12L20 22Z" fill="white" opacity="0.8" />
                                         <defs>
                                             <linearGradient id="footerLogoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                                                <stop stopColor="#667eea"/>
-                                                <stop offset="1" stopColor="#764ba2"/>
+                                                <stop stopColor="#00D1FF" />
+                                                <stop offset="1" stopColor="#00A3C6" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
@@ -179,7 +179,7 @@ const Layout = ({ children }) => {
                                 <span>📧</span> hello@tekynerds.com
                             </p>
                             <p className="footer-locations">
-                                INDIA, USA, Canada, Germany, Australia, Switzerland, Ireland
+                                INDIA, USA, Canada, Germany, Australia, Switzerland, Ireland,India,Europe
                             </p>
                             <div className="footer-social">
                                 <a href="#" aria-label="LinkedIn">LinkedIn</a>
