@@ -14,7 +14,8 @@ const About = () => {
     const team = [
         { name: 'Rahul Kumar', role: 'CEO & Founder', image: '/Rahul Tiwari.jpeg', bio: 'Visionary leader with 5+ years of experience in web development and specializing in cutting-edge web technologies.' },
         { name: 'Mayukh Moitra', role: 'CTO', image: '', bio: 'Tech expert specializing in cutting-edge web technologies.' },
-        { name: 'Aman', role: 'Senior Developer', image: '', bio: 'Full-stack developer passionate about building scalable solutions.' },
+        { name: 'Sunil Bind', role: 'Web Site Manager', image: '', bio: 'Full-stack developer passionate about building scalable solutions.' },
+        { name: 'Sachin', role: 'Digital Expert', image: '', bio: 'expertise (SEO, Social Media, Content), showcases results with metrics (e.g., 5+ years, 200% growth), mentions unique value (data-driven, storytelling), and includes a call-to-action (CTA) to connect or view work, all while maintaining a professional, results-focused tone' },
     ];
 
     const achievements = [
@@ -68,8 +69,8 @@ const About = () => {
                             </div>
                             <h2>Our Mission</h2>
                             <p>
-                                Our mission is to provide top-tier digital solutions that truly resonate with forward-thinking 
-                                businesses. We're dedicated to enhancing user experiences and achieving important business 
+                                Our mission is to provide top-tier digital solutions that truly resonate with forward-thinking
+                                businesses. We're dedicated to enhancing user experiences and achieving important business
                                 objectives through innovative technology and creative design.
                             </p>
                         </div>
@@ -79,7 +80,7 @@ const About = () => {
                             </div>
                             <h2>Our Vision</h2>
                             <p>
-                                To become a globally recognized leader in web development, known for our innovative solutions, 
+                                To become a globally recognized leader in web development, known for our innovative solutions,
                                 exceptional service quality, and commitment to helping businesses achieve their digital transformation goals.
                             </p>
                         </div>

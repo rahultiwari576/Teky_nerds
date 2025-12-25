@@ -19,7 +19,6 @@ const DigitalMarketing = () => {
                             <span>Digital Marketing</span>
                         </div>
                         <div className="breadcrumb-actions">
-                            <Link to="/login" className="breadcrumb-link">Login</Link>
                             <Link to="/contact" className="breadcrumb-button">Get started</Link>
                         </div>
                     </div>

@@ -17,14 +17,60 @@ const WebDesign = () => {
 
     return (
         <div className="service-page">
-            <section className="service-hero">
+            {/* Breadcrumb Navbar */}
+            <nav className="service-breadcrumb">
                 <div className="container">
-                    <h1 className="service-title">
-                        WEB <span className="highlight">DESIGN</span> SERVICES
-                    </h1>
-                    <p className="service-subtitle">
-                        Creating stunning, user-friendly websites that captivate your audience and drive results.
-                    </p>
+                    <div className="breadcrumb-content">
+                        <div className="breadcrumb-links">
+                            <Link to="/">Home</Link>
+                            <span className="breadcrumb-separator">/</span>
+                            <Link to="/services">Services</Link>
+                            <span className="breadcrumb-separator">/</span>
+                        </div>
+                        <div className="breadcrumb-active">
+                            <span>Web Design</span>
+                        </div>
+                        <div className="breadcrumb-actions">
+                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section className="service-hero design-hero">
+                <div className="container">
+                    <div className="service-hero-content-split">
+                        <div className="service-hero-text">
+                            <h1 className="service-title">
+                                WEB <span className="highlight">DESIGN</span> SERVICES
+                            </h1>
+                            <p className="service-subtitle">
+                                Creating stunning, user-friendly websites that captivate your audience and drive results.
+                            </p>
+                        </div>
+                        <div className="service-hero-graphic">
+                            <div className="design-flowchart">
+                                <div className="flow-main-box">How to Create User-Friendly Web Design</div>
+                                <div className="flow-vertical-line">
+                                    <div className="flow-node">
+                                        <div className="flow-node-content">Navigation</div>
+                                    </div>
+                                    <div className="flow-node">
+                                        <div className="flow-node-content">Multimedia</div>
+                                    </div>
+                                    <div className="flow-node">
+                                        <div className="flow-node-content">Compatibility</div>
+                                    </div>
+                                    <div className="flow-node">
+                                        <div className="flow-node-content">Technology</div>
+                                    </div>
+                                    <div className="flow-node">
+                                        <div className="flow-node-content">Interactive</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -35,8 +81,8 @@ const WebDesign = () => {
                             <h2 className="service-subheading">Transform Your Digital Presence</h2>
                             <div className="service-divider"></div>
                             <p className="service-description-text">
-                                Our web design services combine creativity with functionality to deliver websites 
-                                that not only look amazing but also perform exceptionally. We focus on user experience, 
+                                Our web design services combine creativity with functionality to deliver websites
+                                that not only look amazing but also perform exceptionally. We focus on user experience,
                                 responsive design, and modern aesthetics that align with your brand identity.
                             </p>
                             <h3 className="service-features-title">What We Offer:</h3>

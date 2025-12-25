@@ -17,7 +17,27 @@ const MobileApplications = () => {
 
     return (
         <div className="service-page">
-            <section className="service-hero">
+            {/* Breadcrumb Navbar */}
+            <nav className="service-breadcrumb">
+                <div className="container">
+                    <div className="breadcrumb-content">
+                        <div className="breadcrumb-links">
+                            <Link to="/">Home</Link>
+                            <span className="breadcrumb-separator">/</span>
+                            <Link to="/services">Services</Link>
+                            <span className="breadcrumb-separator">/</span>
+                        </div>
+                        <div className="breadcrumb-active">
+                            <span>Mobile App</span>
+                        </div>
+                        <div className="breadcrumb-actions">
+                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section className="service-hero mobile-app-hero">
                 <div className="container">
                     <h1 className="service-title">MOBILE <span className="highlight">APP</span> SERVICES</h1>
                     <p className="service-subtitle">

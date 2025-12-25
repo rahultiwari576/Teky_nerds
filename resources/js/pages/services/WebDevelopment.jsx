@@ -16,7 +16,27 @@ const WebDevelopment = () => {
 
     return (
         <div className="service-page">
-            <section className="service-hero">
+            {/* Breadcrumb Navbar */}
+            <nav className="service-breadcrumb">
+                <div className="container">
+                    <div className="breadcrumb-content">
+                        <div className="breadcrumb-links">
+                            <Link to="/">Home</Link>
+                            <span className="breadcrumb-separator">/</span>
+                            <Link to="/services">Services</Link>
+                            <span className="breadcrumb-separator">/</span>
+                        </div>
+                        <div className="breadcrumb-active">
+                            <span>Web Development</span>
+                        </div>
+                        <div className="breadcrumb-actions">
+                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section className="service-hero web-dev-hero">
                 <div className="container">
                     <h1 className="service-title">WEB <span className="highlight">DEVELOPMENT</span> SERVICES</h1>
                     <p className="service-subtitle">
@@ -32,8 +52,8 @@ const WebDevelopment = () => {
                             <h2 className="service-subheading">Full-Stack Web Development</h2>
                             <div className="service-divider"></div>
                             <p className="service-description-text">
-                                From frontend to backend, we develop complete web solutions that are fast, secure, 
-                                and scalable. Our team specializes in modern frameworks and technologies to deliver 
+                                From frontend to backend, we develop complete web solutions that are fast, secure,
+                                and scalable. Our team specializes in modern frameworks and technologies to deliver
                                 high-performance applications.
                             </p>
                             <h3 className="service-features-title">Our Expertise:</h3>

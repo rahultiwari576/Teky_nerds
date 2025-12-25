@@ -363,7 +363,7 @@
 /* Modern Service Content Section */
 .service-hero {
     background: #F0F8FF;
-    padding: 10rem 0 7rem;
+    padding: 6rem 0 4rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -371,6 +371,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 70vh;
+}
+
+.web-dev-hero {
+    background-image: linear-gradient(rgba(240, 248, 255, 0.85), rgba(240, 248, 255, 0.85)), url('https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?s=1024x1024&w=is&k=20&c=YdGWQdXQYg-G1H89Q12soaleNQEKH9JpihwvrLdFHeA=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.mobile-app-hero {
+    background-image: linear-gradient(rgba(240, 248, 255, 0.88), rgba(240, 248, 255, 0.88)), url('https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.inventory-hero {
+    background-image: linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2gsSvqhew4fU3duSyM_pTlFgSRF_cKAPtIw&s');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cloud-hero {
+    background-image: linear-gradient(rgba(240, 248, 255, 0.88), rgba(240, 248, 255, 0.88)), url('https://5.imimg.com/data5/SELLER/Default/2024/12/476632654/EP/PK/BL/721332/cloud-solutions-services-500x500.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .service-hero::before {
@@ -427,6 +456,141 @@
     position: relative;
     z-index: 1;
     font-weight: 500;
+}
+
+/* Web Design Specific Hero */
+.service-hero-content-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    text-align: left;
+}
+
+.design-hero {
+    background-image: linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH3Ii-N22ODs38RwTZDpblKmLXy2E7hGTEew&s');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2rem 0;
+    min-height: calc(100vh - 120px);
+}
+
+.design-hero .service-title {
+    justify-content: flex-start;
+    font-size: 4rem;
+}
+
+.design-hero .service-subtitle {
+    margin: 0;
+    text-align: left;
+}
+
+.service-hero-graphic {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+    animation: fadeInRight 1s ease-out;
+}
+
+.design-flowchart {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+.flow-main-box {
+    background: #a3d9a5;
+    color: #2d5a27;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 2px solid #8cc68a;
+    box-shadow: 0 4px 10px rgba(163, 217, 165, 0.3);
+}
+
+.flow-vertical-line {
+    position: relative;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.flow-vertical-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
+    bottom: 2rem;
+    width: 2px;
+    background: #2d5a27;
+}
+
+.flow-node {
+    position: relative;
+}
+
+.flow-node::before {
+    content: '';
+    position: absolute;
+    left: -3rem;
+    top: 50%;
+    width: 3rem;
+    height: 2px;
+    background: #2d5a27;
+}
+
+.flow-node::after {
+    content: '▶';
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: #2d5a27;
+}
+
+.flow-node-content {
+    background: #eef7ee;
+    color: #2d5a27;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #d4ecd4;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 180px;
+}
+
+.flow-node:hover .flow-node-content {
+    background: #a3d9a5;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(163, 217, 165, 0.4);
+}
+
+@media (max-width: 968px) {
+    .service-hero-content-split {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .design-hero .service-title {
+        justify-content: center;
+    }
+
+    .service-hero-graphic {
+        order: 2;
+    }
 }
 
 .service-content-modern {

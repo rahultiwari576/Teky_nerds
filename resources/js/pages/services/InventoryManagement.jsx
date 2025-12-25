@@ -17,7 +17,27 @@ const InventoryManagement = () => {
 
     return (
         <div className="service-page">
-            <section className="service-hero">
+            {/* Breadcrumb Navbar */}
+            <nav className="service-breadcrumb">
+                <div className="container">
+                    <div className="breadcrumb-content">
+                        <div className="breadcrumb-links">
+                            <Link to="/">Home</Link>
+                            <span className="breadcrumb-separator">/</span>
+                            <Link to="/services">Services</Link>
+                            <span className="breadcrumb-separator">/</span>
+                        </div>
+                        <div className="breadcrumb-active">
+                            <span>Inventory Management</span>
+                        </div>
+                        <div className="breadcrumb-actions">
+                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section className="service-hero inventory-hero">
                 <div className="container">
                     <h1 className="service-title">INVENTORY <span className="highlight">MANAGEMENT</span> SERVICES</h1>
                     <p className="service-subtitle">
@@ -33,8 +53,8 @@ const InventoryManagement = () => {
                             <h2 className="service-subheading">Streamline Your Inventory Operations</h2>
                             <div className="service-divider"></div>
                             <p className="service-description-text">
-                                At Tekynerds, we specialize in enhancing business success through efficient inventory management. 
-                                Our services empower businesses of all sizes and industries to streamline inventory, cut costs, 
+                                At Tekynerds, we specialize in enhancing business success through efficient inventory management.
+                                Our services empower businesses of all sizes and industries to streamline inventory, cut costs,
                                 and boost productivity with intelligent management systems.
                             </p>
                             <h3 className="service-features-title">Our Inventory Solutions:</h3>

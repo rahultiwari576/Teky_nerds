@@ -17,7 +17,27 @@ const CloudServices = () => {
 
     return (
         <div className="service-page">
-            <section className="service-hero">
+            {/* Breadcrumb Navbar */}
+            <nav className="service-breadcrumb">
+                <div className="container">
+                    <div className="breadcrumb-content">
+                        <div className="breadcrumb-links">
+                            <Link to="/">Home</Link>
+                            <span className="breadcrumb-separator">/</span>
+                            <Link to="/services">Services</Link>
+                            <span className="breadcrumb-separator">/</span>
+                        </div>
+                        <div className="breadcrumb-active">
+                            <span>Cloud Solutions</span>
+                        </div>
+                        <div className="breadcrumb-actions">
+                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section className="service-hero cloud-hero">
                 <div className="container">
                     <h1 className="service-title">CLOUD <span className="highlight">SOLUTION</span> SERVICES</h1>
                     <p className="service-subtitle">
