@@ -5,10 +5,42 @@ import './BlogPost.css';
 
 const BlogPost = () => {
     const { slug } = useParams();
-    // Static data - no API needed
-    // In a real static site, you could import blog posts from a JSON file
-    const post = null; // No posts available
-    const relatedPosts = [];
+    const [post, setPost] = React.useState(null);
+    const [loading, setLoading] = React.useState(true);
+    const [error, setError] = React.useState(null);
+    const relatedPosts = []; // Can be implemented later
+
+    React.useEffect(() => {
+        const fetchPost = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch(`/api/posts/${slug}`);
+                if (!response.ok) {
+                    throw new Error('Post not found');
+                }
+                const data = await response.json();
+                setPost(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (slug) {
+            fetchPost();
+        }
+    }, [slug]);
+
+    if (loading) {
+        return (
+            <div className="blog-post-page">
+                <div className="container">
+                    <div className="loading">Loading...</div>
+                </div>
+            </div>
+        );
+    }
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);

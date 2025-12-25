@@ -20,39 +20,33 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         setStatus({ type: '', message: '' });
 
-        // Option 1: Use mailto link (opens email client)
-        const { name, email, phone, subject, message } = formData;
-        const mailtoLink = `mailto:hello@tekynerds.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\nMessage:\n${message}`
-        )}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        setTimeout(() => {
-            setStatus({
-                type: 'success',
-                message: 'Your email client should open. If not, please email us at hello@tekynerds.com'
+        // Send form data to backend server for email sending
+        try {
+            const response = await fetch('/send-email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                subject: '',
-                message: ''
-            });
-            setLoading(false);
-        }, 500);
-
-        // Option 2: For a production site, you could use EmailJS or Formspree here
-        // Example with EmailJS (requires setup):
-        // emailjs.send('service_id', 'template_id', formData, 'user_id')
+            const result = await response.json();
+            if (result.success) {
+                setStatus({ type: 'success', message: 'Your message has been sent successfully!' });
+            } else {
+                setStatus({ type: 'error', message: result.message || 'Failed to send message.' });
+            }
+        } catch (err) {
+            console.error('Error sending email:', err);
+            setStatus({ type: 'error', message: 'An error occurred while sending your message.' });
+        }
+        // Reset form fields after attempt
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+        setLoading(false);
         //   .then(() => { /* success */ })
         //   .catch(() => { /* error */ });
     };
@@ -82,7 +76,7 @@ const Contact = () => {
                                 Thank you for your interest in Tekynerds and Our Services. We will get back to you within 24 hrs.
                             </p>
                             <p>
-                                We're here to help! Whether you have a question about our services, need a quote, 
+                                We're here to help! Whether you have a question about our services, need a quote,
                                 or want to discuss your project, our team is ready to assist you.
                             </p>
                             <div className="contact-details">

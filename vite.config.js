@@ -11,6 +11,10 @@ export default defineConfig({
     },
     server: {
         port: 5173,
+        proxy: {
+            '/send-email': 'http://localhost:5001',
+            '/api': 'http://localhost:5001'
+        }
     },
     build: {
         outDir: 'dist',

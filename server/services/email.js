@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 export const sendContactEmail = async ({ name, email, phone, subject, message }) => {
     const mailOptions = {
         from: `"${name}" <${email}>`,
-        to: 'rahuhlktiwari12@gmail.com',
+        to: 'hello@tekynerds.com',
         subject: `New Contact Form Submission: ${subject}`,
         html: `
             <!DOCTYPE html>

@@ -12,6 +12,7 @@ import CloudServices from './pages/services/CloudServices';
 import DigitalMarketing from './pages/services/DigitalMarketing';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import NewPost from './pages/NewPost';
 import Contact from './pages/Contact';
 import Growth from './pages/Growth';
 
@@ -30,6 +31,7 @@ function App() {
                     <Route path="/services/cloud-services" element={<CloudServices />} />
                     <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/new" element={<NewPost />} />
                     <Route path="/blog/:slug" element={<BlogPost />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/growth" element={<Growth />} />

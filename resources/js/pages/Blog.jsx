@@ -4,9 +4,9 @@ import { FiSearch, FiCalendar, FiUser, FiArrowRight } from 'react-icons/fi';
 import './Blog.css';
 
 const Blog = () => {
-    // Static/mock blog data (no API needed)
-    const [allPosts] = useState([]); // Empty for now, can add mock data later
-    const [loading, setLoading] = useState(false);
+    // Fetch posts from API
+    const [allPosts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
@@ -48,7 +48,21 @@ const Blog = () => {
     }, [allPosts, searchTerm, selectedCategory, currentPage, perPage]);
 
     useEffect(() => {
-        setLoading(false);
+        const fetchPosts = async () => {
+            try {
+                const response = await fetch('/api/posts');
+                if (response.ok) {
+                    const data = await response.json();
+                    setPosts(data);
+                }
+            } catch (error) {
+                console.error('Failed to fetch posts:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchPosts();
     }, []);
 
     const handleSearch = (e) => {
@@ -69,6 +83,11 @@ const Blog = () => {
                     <p className="page-subtitle">
                         We use an agile approach to test assumptions and connect with the needs of our audience early and often.
                     </p>
+                    <div style={{ marginTop: '20px' }}>
+                        <Link to="/blog/new" className="search-button" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+                            + Create New Post
+                        </Link>
+                    </div>
                 </div>
             </section>
 

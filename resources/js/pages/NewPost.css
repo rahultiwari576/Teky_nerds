@@ -1,0 +1,104 @@
+.new-post-page {
+    padding: 120px 0 60px;
+    min-height: 80vh;
+    background-color: #f8fafc;
+}
+
+.new-post-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.content-editor {
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.save-button,
+.cancel-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.save-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+}
+
+.save-button:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.save-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cancel-button {
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.cancel-button:hover {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    color: #ef4444;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
