@@ -631,6 +631,13 @@
     gap: 1rem;
 }
 
+@media (max-width: 640px) {
+    .home-cta-btn-primary,
+    .home-cta-btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
 .home-cta-btn-primary {
     display: inline-flex;
     padding: 0.75rem 1.5rem;

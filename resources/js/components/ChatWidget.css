@@ -1,0 +1,121 @@
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.chat-button:hover {
+    background: #1e3a8a;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    max-height: 480px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    animation: fadeIn 0.3s ease-out;
+    z-index: 1000;
+}
+
+.chat-header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 0.75rem;
+    overflow-y: auto;
+    font-size: 0.875rem;
+    color: #111827;
+}
+
+.chat-message {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+.chat-message.bot {
+    text-align: left;
+}
+
+.chat-input-container {
+    display: flex;
+    border-top: 1px solid #e5e7eb;
+    padding: 0.5rem;
+}
+
+.chat-input {
+    flex: 1;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    resize: none;
+    outline: none;
+}
+
+.chat-send-button {
+    background: #2563eb;
+    border: none;
+    color: #fff;
+    padding: 0 0.75rem;
+    margin-left: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-send-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.chat-send-button:hover:not(:disabled) {
+    background: #1e3a8a;
+}
+
+@media (max-width: 640px) {
+    .chat-window {
+        width: 90%;
+        right: 5%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

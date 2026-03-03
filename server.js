@@ -6,6 +6,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
 
+// import chat router added for new chatbot functionality
+import chatRoutes from './server/routes/chat.js';
+
 dotenvConfig();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -160,6 +163,14 @@ app.post('/api/posts', async (req, res) => {
 });
 
 // Serve static files from the React build
+// health check
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'Server is running' });
+});
+
+// add chatbot route
+app.use('/api/v1/chat', chatRoutes);
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Handle React routing, return all requests to React app

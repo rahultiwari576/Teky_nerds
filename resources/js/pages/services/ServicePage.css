@@ -777,6 +777,18 @@
     animation: fadeInUp 0.8s ease-out 0.9s both;
 }
 
+@media (max-width: 640px) {
+    .service-cta-modern {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+    .service-content-right {
+        height: auto;
+        margin-top: 2rem;
+    }
+}
 .service-cta-modern::before {
     content: '';
     position: absolute;

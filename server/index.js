@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import blogRoutes from './routes/blog.js';
 import contactRoutes from './routes/contact.js';
+import chatRoutes from './routes/chat.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,6 +26,7 @@ app.use(express.static('dist'));
 // API Routes
 app.use('/api/v1/blog', blogRoutes);
 app.use('/api/v1/contact', contactRoutes);
+app.use('/api/v1/chat', chatRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

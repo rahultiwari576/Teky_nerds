@@ -1,0 +1,14 @@
+{
+  "services": {
+    "webDevelopment": "Web development: building robust, scalable web applications using modern frameworks (React, Vue, Angular, Laravel, Node.js, Python). Full-stack solutions, API development, database design, e-commerce, CMS.",
+    "webDesign": "Web design: custom, responsive and mobile-first user interface design, UI/UX, branding integration, landing pages, design systems, redesign services.",
+    "cloudSolutions": "Cloud solutions: infrastructure setup and migration, server management, security and compliance, auto-scaling, cloud databases, multi-cloud architecture, performance monitoring, disaster recovery.",
+    "mobileApplications": "Mobile applications: native and cross-platform apps for iOS and Android, UI/UX principles, integration with backend services.",
+    "inventoryManagement": "Inventory management: systems to track, control and optimise stock levels, orders, and warehouse data with real-time dashboards.",
+    "digitalMarketing": "Digital marketing: SEO, social media marketing, paid advertising (PPC, display), content strategy, email automation, analytics and conversion optimization.",
+    "chatbot": "AI chatbot integration: custom conversational interfaces using GPT‑3/4, OpenAI API, chat history storage, analytics, security compliance, multichannel deployment, onboarding and maintenance."  },
+  "about": "Tekynerds is a web development agency founded in 2022 by Rahul Kumar. We deliver innovative digital solutions, serving clients globally across web, mobile and cloud. Our mission is to enhance user experiences and achieve business objectives through technology and design.",
+  "contact": "Email hello@tekynerds.com, phone +91-7900167247, locations: USA, Canada, Germany, Australia, Switzerland, Ireland, India, Europe. We respond within 24 hours.",
+  "process": "Discovery & requirements gathering; design and conversation flow mapping; development and AI model tuning; testing and user training; deployment and ongoing maintenance.",
+  "digitalMarketing": "Our digital marketing process includes audit, strategy development, campaign creation, tracking, analytics, and iterative optimization. Benefits: increased visibility, leads, authority, engagement, measurable ROI."
+}

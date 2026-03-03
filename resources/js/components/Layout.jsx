@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiHome, FiUser, FiBriefcase, FiFileText, FiTrendingUp, FiMail, FiMenu, FiX, FiChevronDown, FiDollarSign } from 'react-icons/fi';
 import './Layout.css';
+import ChatWidget from './ChatWidget';
 
 const Layout = ({ children }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -190,6 +191,7 @@ const Layout = ({ children }) => {
             </header>
 
             <main className="layout-main">{children}</main>
+            <ChatWidget />
 
             <footer className="layout-footer">
                 <div className="container">
