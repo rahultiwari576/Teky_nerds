@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiCheckCircle, FiMonitor, FiSmartphone, FiLayers, FiImage, FiShoppingCart, FiTarget, FiGrid, FiRefreshCw } from 'react-icons/fi';
 import './ServicePage.css';
+import SEO from '../../components/SEO';
 
 const WebDesign = () => {
     const features = [
@@ -17,6 +18,10 @@ const WebDesign = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="Web Design Services - Tekynerds"
+                description="Creative and responsive web design services focused on user experience, brand identity, and conversion."
+            />
             <section className="service-hero design-hero">
                 <div className="container">
                     <div className="service-hero-content-split">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiSmartphone, FiTablet, FiLayers, FiImage, FiTrendingUp, FiZap, FiBell, FiRefreshCw } from 'react-icons/fi';
 import './ServicePage.css';
+import SEO from '../../components/SEO';
 
 const MobileApplications = () => {
     const expertise = [
@@ -17,6 +18,10 @@ const MobileApplications = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="Mobile App Development - Tekynerds"
+                description="Native and cross-platform mobile app development services including React Native, Flutter, iOS and Android."
+            />
             {/* Breadcrumb Navbar */}
             <section className="service-hero mobile-app-hero">
                 <div className="container">

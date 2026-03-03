@@ -33,12 +33,12 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Server is running' });
 });
 
-// Serve React app for all other routes (only in production)
-if (process.env.NODE_ENV === 'production') {
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../dist', 'index.html'));
-    });
-}
+// Serve React app for all other routes (SPA fallback)
+// this ensures that refreshing or directly navigating to a client-side route
+// like /about or /services will always return index.html instead of a 404.
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+});
 
 // Start server
 app.listen(PORT, () => {

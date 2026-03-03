@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FiSearch, FiCalendar, FiUser, FiArrowRight } from 'react-icons/fi';
 import './Blog.css';
 
+import SEO from '../components/SEO';
+
 const Blog = () => {
     // Fetch posts from API
     const [allPosts, setPosts] = useState([]);
@@ -77,6 +79,10 @@ const Blog = () => {
 
     return (
         <div className="blog-page">
+            <SEO
+                title="Blog - Tekynerds"
+                description="Read the latest articles on web development, design, digital marketing and more from the Tekynerds team."
+            />
             <section className="blog-hero">
                 <div className="container">
                     <h1 className="page-title">OUR <span className="highlight">BLOGS</span></h1>

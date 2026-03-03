@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ServicePage.css';
 
+import SEO from '../../components/SEO';
+
 const DigitalMarketing = () => {
     const offerings = [
         'Search Engine Optimization (SEO)',
@@ -30,6 +32,10 @@ const DigitalMarketing = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="Digital Marketing Services - Tekynerds"
+                description="Comprehensive SEO, PPC, social media, and content marketing services to grow your brand and drive measurable results."
+            />
             {/* Hero Section */}
             <section className="service-hero digital-marketing-hero">
                 <div className="container">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiCode, FiServer, FiLayers, FiDatabase, FiShoppingCart, FiGrid, FiZap, FiCheckCircle } from 'react-icons/fi';
 import './ServicePage.css';
+import SEO from '../../components/SEO';
 
 const WebDevelopment = () => {
     const expertise = [
@@ -16,6 +17,10 @@ const WebDevelopment = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="Web Development Services - Tekynerds"
+                description="Full-stack web development services: React, Node.js, Laravel, APIs, e-commerce, and custom web applications."
+            />
             {/* Breadcrumb Navbar */}
             <section className="service-hero web-dev-hero">
                 <div className="container">

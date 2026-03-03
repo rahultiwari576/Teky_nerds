@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { FiCode, FiPackage, FiImage, FiFileText, FiTrendingUp, FiCloud, FiTablet, FiShoppingBag, FiMessageSquare } from 'react-icons/fi';
 
 const Services = () => {
@@ -17,6 +18,10 @@ const Services = () => {
 
     return (
         <div className="min-h-screen bg-[#F8FAFC]">
+            <SEO
+                title="Services - Tekynerds"
+                description="Explore the full range of web development, design, mobile apps, cloud, marketing and chatbot services offered by Tekynerds."
+            />
             <section className="py-16 md:py-24">
                 <div className="container text-center">
                     <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Our Services</h1>

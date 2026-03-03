@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FiCalendar, FiTarget, FiEye, FiUsers, FiAward, FiTrendingUp } from 'react-icons/fi';
 import './About.css';
 
+import SEO from '../components/SEO';
+
 const About = () => {
     const timeline = [
         { year: '2022', title: 'Company Founded', description: 'Tekynerds was established with a vision to transform businesses through innovative web solutions.' },
@@ -27,6 +29,10 @@ const About = () => {
 
     return (
         <div className="about-page">
+            <SEO
+                title="About Us - Tekynerds"
+                description="Learn about Tekynerds — our mission, team, achievements and the story behind our digital solutions agency."
+            />
             <section className="about-hero">
                 <div className="container">
                     <nav className="about-breadcrumb">

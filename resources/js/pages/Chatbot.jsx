@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiCheckCircle, FiTool, FiDatabase, FiZap, FiShield, FiMessageSquare } from 'react-icons/fi';
 import './services/ServicePage.css';
+import SEO from '../components/SEO';
 
 const Chatbot = () => {
     const offerings = [
@@ -31,6 +32,10 @@ const Chatbot = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="AI Chatbot Integration - Tekynerds"
+                description="Build intelligent, secure chatbots integrated with OpenAI and custom business prompts to automate customer engagement."
+            />
             {/* Hero Section */}
             <section className="service-hero chatbot-hero">
                 <div className="container">

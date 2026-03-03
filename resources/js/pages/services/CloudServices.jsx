@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiCloud, FiServer, FiShield, FiZap, FiDatabase, FiLayers, FiTrendingUp, FiCheckCircle } from 'react-icons/fi';
 import './ServicePage.css';
+import SEO from '../../components/SEO';
 
 const CloudServices = () => {
     const expertise = [
@@ -17,6 +18,10 @@ const CloudServices = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="Cloud Services - Tekynerds"
+                description="Cloud infrastructure, migration, security, and performance services to scale your applications reliably."
+            />
             {/* Breadcrumb Navbar */}
             <section className="service-hero cloud-hero">
                 <div className="container">

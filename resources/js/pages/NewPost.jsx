@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiSave, FiX } from 'react-icons/fi';
 import './NewPost.css';
+import SEO from '../components/SEO';
 
 const NewPost = () => {
     const navigate = useNavigate();
@@ -54,6 +55,10 @@ const NewPost = () => {
 
     return (
         <div className="new-post-page">
+            <SEO
+                title="Create New Blog Post - Tekynerds"
+                description="Create and publish blog posts for the Tekynerds blog."
+            />
             <div className="container">
                 <h1 className="page-title">Create New Blog Post</h1>
 

@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { FiCalendar, FiUser, FiArrowLeft } from 'react-icons/fi';
 import './BlogPost.css';
 
+import SEO from '../components/SEO';
+
 const BlogPost = () => {
     const { slug } = useParams();
     const [post, setPost] = React.useState(null);
@@ -59,6 +61,10 @@ const BlogPost = () => {
 
     return (
         <div className="blog-post-page">
+            <SEO
+                title={`${post.title} - Tekynerds`}
+                description={post.excerpt || 'Read our latest blog post at Tekynerds.'}
+            />
             <article className="blog-post">
                 <div className="container">
                     <Link to="/blog" className="back-link">

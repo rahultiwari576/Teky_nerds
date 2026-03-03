@@ -6,6 +6,8 @@ import {
 } from 'react-icons/fi';
 import './Home.css';
 
+import SEO from '../components/SEO';
+
 const Home = () => {
     const stats = [
         { icon: FiZap, number: '2', label: 'Years Experience', suffix: '+ Years' },
@@ -60,6 +62,10 @@ const Home = () => {
 
     return (
         <div className="home-page">
+            <SEO
+                title="Tekynerds - Web Development & Digital Services"
+                description="Tekynerds builds custom websites, mobile apps, and digital marketing solutions to drive growth for forward-thinking brands."
+            />
             {/* Hero */}
             <section className="home-hero">
                 <div className="container">

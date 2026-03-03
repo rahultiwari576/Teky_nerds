@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiPackage, FiDatabase, FiActivity, FiTrendingUp, FiShoppingCart, FiZap, FiRefreshCw, FiCheckCircle } from 'react-icons/fi';
 import './ServicePage.css';
+import SEO from '../../components/SEO';
 
 const InventoryManagement = () => {
     const expertise = [
@@ -17,6 +18,10 @@ const InventoryManagement = () => {
 
     return (
         <div className="service-page">
+            <SEO
+                title="Inventory Management Systems - Tekynerds"
+                description="Custom inventory management solutions: stock tracking, forecasting, automation and analytics to optimize operations."
+            />
             {/* Breadcrumb Navbar */}
             <section className="service-hero inventory-hero">
                 <div className="container">

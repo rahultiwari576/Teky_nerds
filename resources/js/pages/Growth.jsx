@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiZap, FiFileText, FiMonitor, FiCode } from 'react-icons/fi';
 import './Growth.css';
+import SEO from '../components/SEO';
 
 const Growth = () => {
     const processSteps = [
@@ -13,6 +14,10 @@ const Growth = () => {
 
     return (
         <div className="growth-page">
+            <SEO
+                title="Growth Strategy - Tekynerds"
+                description="Growth services from Tekynerds: discovery, planning, design and development to turn ideas into user-friendly digital products."
+            />
             <section className="growth-hero">
                 <div className="container">
                     <h1 className="growth-hero-title">
