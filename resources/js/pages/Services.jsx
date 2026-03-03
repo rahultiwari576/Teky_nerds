@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiCode, FiPackage, FiImage, FiFileText, FiTrendingUp, FiCloud, FiTablet, FiShoppingBag } from 'react-icons/fi';
+import { FiCode, FiPackage, FiImage, FiFileText, FiTrendingUp, FiCloud, FiTablet, FiShoppingBag, FiMessageSquare } from 'react-icons/fi';
 
 const Services = () => {
     const services = [
@@ -11,6 +11,7 @@ const Services = () => {
         { title: 'Growth', path: '/growth', icon: FiTrendingUp },
         { title: 'Cloud Solutions', path: '/services/cloud-services', icon: FiCloud },
         { title: 'Mobile Applications', path: '/services/mobile-applications', icon: FiTablet },
+        { title: 'AI Chatbot Integration', path: '/chatbot', icon: FiMessageSquare },
         { title: 'Digital Marketing', path: '/services/digital-marketing', icon: FiShoppingBag },
     ];
 

@@ -406,6 +406,11 @@
     background: #0F172A;
 }
 
+.chatbot-hero {
+    /* solid corporate blue to complement branding */
+    background: #1E3A8A;
+}
+
 .service-hero::before {
     display: none;
 }
