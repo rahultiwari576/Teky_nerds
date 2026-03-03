@@ -15,7 +15,7 @@ const About = () => {
         { name: 'Rahul Kumar', role: 'CEO & Founder', image: '/Rahul Tiwari.jpeg', bio: 'Visionary leader with 5+ years of experience in web development and specializing in cutting-edge web technologies.' },
         { name: 'Mayukh Moitra', role: 'CTO', image: '', bio: 'Tech expert specializing in cutting-edge web technologies.' },
         { name: 'Sunil Bind', role: 'Web Site Manager', image: '', bio: 'Full-stack developer passionate about building scalable solutions.' },
-        { name: 'Sachin', role: 'Digital Expert', image: '', bio: 'expertise (SEO, Social Media, Content), showcases results with metrics (e.g., 5+ years, 200% growth), mentions unique value (data-driven, storytelling), and includes a call-to-action (CTA) to connect or view work, all while maintaining a professional, results-focused tone' },
+        { name: 'Sachin', role: 'Digital Expert', image: '', bio: 'Expertise in SEO, Social Media, Content. 5+ years experience, data-driven approach with results-focused delivery.' },
     ];
 
     const achievements = [
@@ -27,76 +27,57 @@ const About = () => {
 
     return (
         <div className="about-page">
-            {/* Hero Banner Section */}
             <section className="about-hero">
-                <div className="hero-background-elements">
-                    <div className="bg-element">grow here</div>
-                    <div className="bg-element">person</div>
-                    <div className="bg-element">you can</div>
-                    <div className="bg-element">target market</div>
-                    <div className="bg-element">more</div>
-                    <div className="bg-element">Platform</div>
-                    <div className="bg-element social">f</div>
-                </div>
                 <div className="container">
-                    <div className="breadcrumb">
-                        <Link to="/" className="breadcrumb-link">Home</Link>
-                        <span className="breadcrumb-separator">/</span>
-                        <span className="breadcrumb-active">About</span>
-                    </div>
-                    <div className="hero-content">
-                        <div className="hero-left">
-                            <h1 className="hero-title">
-                                WE BUILD BRIDGES BETWEEN <span className="highlight">COMPANIES AND CUSTOMERS</span>
-                            </h1>
-                        </div>
-                        <div className="hero-right">
-                            <p className="hero-description">
-                                To Build Software That Gives Customer-Facing Teams At Small And Medium Sized Business The Ability To Create Fruitful And Enduring Relationships With Customers.
-                            </p>
-                        </div>
+                    <nav className="about-breadcrumb">
+                        <Link to="/">Home</Link>
+                        <span>/</span>
+                        <span style={{ color: '#111827', fontWeight: 500 }}>About</span>
+                    </nav>
+                    <div className="about-hero-grid">
+                        <h1 className="about-hero-title">
+                            We Build Bridges Between <span className="highlight">Companies and Customers</span>
+                        </h1>
+                        <p className="about-hero-desc">
+                            To Build Software That Gives Customer-Facing Teams At Small And Medium Sized Business The Ability To Create Fruitful And Enduring Relationships With Customers.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            {/* Mission & Vision Section */}
-            <section className="mission-vision-section">
+            <section className="about-section about-section-light">
                 <div className="container">
-                    <div className="mission-vision-grid">
-                        <div className="mission-card">
-                            <div className="card-icon-wrapper">
-                                <FiTarget className="card-icon" />
+                    <div className="about-mission-grid">
+                        <div className="about-mission-card">
+                            <div className="about-mission-icon">
+                                <FiTarget size={24} />
                             </div>
                             <h2>Our Mission</h2>
                             <p>
-                                Our mission is to provide top-tier digital solutions that truly resonate with forward-thinking
-                                businesses. We're dedicated to enhancing user experiences and achieving important business
-                                objectives through innovative technology and creative design.
+                                Our mission is to provide top-tier digital solutions that truly resonate with forward-thinking businesses. We're dedicated to enhancing user experiences and achieving important business objectives through innovative technology and creative design.
                             </p>
                         </div>
-                        <div className="vision-card">
-                            <div className="card-icon-wrapper">
-                                <FiEye className="card-icon" />
+                        <div className="about-mission-card">
+                            <div className="about-mission-icon">
+                                <FiEye size={24} />
                             </div>
                             <h2>Our Vision</h2>
                             <p>
-                                To become a globally recognized leader in web development, known for our innovative solutions,
-                                exceptional service quality, and commitment to helping businesses achieve their digital transformation goals.
+                                To become a globally recognized leader in web development, known for our innovative solutions, exceptional service quality, and commitment to helping businesses achieve their digital transformation goals.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Company Story Timeline */}
-            <section className="timeline-section">
+            <section className="about-section about-section-white">
                 <div className="container">
-                    <h2 className="section-title">Our Story</h2>
-                    <div className="timeline">
+                    <h2 className="about-section-title">Our Story</h2>
+                    <div className="about-timeline">
                         {timeline.map((item, index) => (
-                            <div key={index} className="timeline-item">
-                                <div className="timeline-year">{item.year}</div>
-                                <div className="timeline-content">
+                            <div key={index} className="about-timeline-item">
+                                <div className="about-timeline-year">{item.year}</div>
+                                <div className="about-timeline-content">
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>
                                 </div>
@@ -106,18 +87,16 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Who We Are Section */}
-            <section className="who-we-are-section">
+            <section className="about-section about-section-light">
                 <div className="container">
-                    <div className="who-we-are-header">
-                        <div className="section-left">
-                            <h2 className="section-title-large">Together We Are Strong</h2>
-                        </div>
-                        <div className="section-right">
-                            <h3 className="section-subtitle">
-                                United by a shared vision of excellence, we collaborate to deliver transformative digital solutions that propel businesses forward.
-                            </h3>
-                            <p>
+                    <div className="about-who-grid">
+                        <h2 className="about-who-title">Together We Are Strong</h2>
+                        <div>
+                            <h3 className="about-who-subtitle">United by a shared vision of excellence</h3>
+                            <p className="about-who-text">
+                                We collaborate to deliver transformative digital solutions that propel businesses forward.
+                            </p>
+                            <p className="about-who-text">
                                 Tekynerds, founded by Rahul Kumar in 2022, is a premier web development agency specializing in creating cutting-edge digital solutions that drive business growth. Our expert team combines innovative technology with strategic design to deliver exceptional results that exceed client expectations. Based in India with a global reach, we collaborate with businesses worldwide to transform ideas into powerful digital experiences.
                             </p>
                         </div>
@@ -125,45 +104,41 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Team Section */}
-            <section className="team-section">
+            <section className="about-section about-section-white">
                 <div className="container">
-                    <h2 className="section-title">Meet Our Team</h2>
-                    <div className="team-grid">
+                    <h2 className="about-section-title">Meet Our Team</h2>
+                    <div className="about-team-grid">
                         {team.map((member, index) => (
-                            <div key={index} className="team-card">
-                                <div className="team-image-wrapper">
+                            <div key={index} className="about-team-card">
+                                <div className="about-team-avatar">
                                     {member.image ? (
-                                        <img src={member.image} alt={member.name} className="team-image" />
+                                        <img src={member.image} alt={member.name} />
                                     ) : (
-                                        <div className="team-placeholder">
-                                            <FiUsers className="placeholder-icon" />
-                                        </div>
+                                        <FiUsers size={48} style={{ color: '#fff' }} />
                                     )}
                                 </div>
-                                <h3 className="team-name">{member.name}</h3>
-                                <p className="team-role">{member.role}</p>
-                                <p className="team-bio">{member.bio}</p>
+                                <h3 className="about-team-name">{member.name}</h3>
+                                <p className="about-team-role">{member.role}</p>
+                                <p className="about-team-bio">{member.bio}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Achievements & Numbers Section */}
-            <section className="achievements-section">
+            <section className="about-section about-section-light">
                 <div className="container">
-                    <h2 className="section-title">Our Achievements</h2>
-                    <div className="achievements-grid">
+                    <h2 className="about-section-title">Our Achievements</h2>
+                    <div className="about-achievements-grid">
                         {achievements.map((achievement, index) => {
                             const Icon = achievement.icon;
                             return (
-                                <div key={index} className="achievement-card">
-                                    <div className="achievement-icon-wrapper">
-                                        <Icon className="achievement-icon" />
+                                <div key={index} className="about-achievement-card">
+                                    <div className="about-achievement-icon">
+                                        <Icon size={24} />
                                     </div>
-                                    <div className="achievement-number">{achievement.number}</div>
-                                    <div className="achievement-label">{achievement.label}</div>
+                                    <div className="about-achievement-number">{achievement.number}</div>
+                                    <p className="about-achievement-label">{achievement.label}</p>
                                 </div>
                             );
                         })}
@@ -171,13 +146,10 @@ const About = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="about-cta">
+            <section className="about-section about-section-dark">
                 <div className="container">
-                    <h2>Ready to Start Your Project?</h2>
-                    <Link to="/contact" className="cta-button">
-                        Get In Touch
-                    </Link>
+                    <h2 className="about-cta-title">Ready to Start Your Project?</h2>
+                    <Link to="/contact" className="about-cta-btn">Get In Touch</Link>
                 </div>
             </section>
         </div>
@@ -185,4 +157,3 @@ const About = () => {
 };
 
 export default About;
-

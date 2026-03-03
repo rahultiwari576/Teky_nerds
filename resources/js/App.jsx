@@ -15,6 +15,11 @@ import BlogPost from './pages/BlogPost';
 import NewPost from './pages/NewPost';
 import Contact from './pages/Contact';
 import Growth from './pages/Growth';
+import Chatbot from './pages/Chatbot';
+import Terms from './pages/terms';
+import Privacy from './pages/privacy';
+import Cancellation from './pages/cancellation';
+import Pricing from './pages/Pricing';
 
 function App() {
     try {
@@ -35,6 +40,11 @@ function App() {
                     <Route path="/blog/:slug" element={<BlogPost />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/growth" element={<Growth />} />
+                    <Route path="/chatbot" element={<Chatbot />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/cancellation" element={<Cancellation />} />
                 </Routes>
             </Layout>
         );

@@ -17,26 +17,6 @@ const WebDesign = () => {
 
     return (
         <div className="service-page">
-            {/* Breadcrumb Navbar */}
-            <nav className="service-breadcrumb">
-                <div className="container">
-                    <div className="breadcrumb-content">
-                        <div className="breadcrumb-links">
-                            <Link to="/">Home</Link>
-                            <span className="breadcrumb-separator">/</span>
-                            <Link to="/services">Services</Link>
-                            <span className="breadcrumb-separator">/</span>
-                        </div>
-                        <div className="breadcrumb-active">
-                            <span>Web Design</span>
-                        </div>
-                        <div className="breadcrumb-actions">
-                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
             <section className="service-hero design-hero">
                 <div className="container">
                     <div className="service-hero-content-split">
@@ -132,12 +112,12 @@ const WebDesign = () => {
                                     </div>
                                     <div className="browser-content">
                                         <div className="design-layout">
-                                            <div className="layout-header"></div>
-                                            <div className="layout-body">
-                                                <div className="layout-sidebar"></div>
-                                                <div className="layout-main">
-                                                    <div className="layout-card"></div>
-                                                    <div className="layout-card"></div>
+                                            <div className="design-mockup-header"></div>
+                                            <div className="design-mockup-body">
+                                                <div className="design-mockup-sidebar"></div>
+                                                <div className="design-mockup-main">
+                                                    <div className="design-mockup-card"></div>
+                                                    <div className="design-mockup-card"></div>
                                                 </div>
                                             </div>
                                         </div>

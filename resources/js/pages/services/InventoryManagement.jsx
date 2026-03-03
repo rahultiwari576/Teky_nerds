@@ -18,25 +18,6 @@ const InventoryManagement = () => {
     return (
         <div className="service-page">
             {/* Breadcrumb Navbar */}
-            <nav className="service-breadcrumb">
-                <div className="container">
-                    <div className="breadcrumb-content">
-                        <div className="breadcrumb-links">
-                            <Link to="/">Home</Link>
-                            <span className="breadcrumb-separator">/</span>
-                            <Link to="/services">Services</Link>
-                            <span className="breadcrumb-separator">/</span>
-                        </div>
-                        <div className="breadcrumb-active">
-                            <span>Inventory Management</span>
-                        </div>
-                        <div className="breadcrumb-actions">
-                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
             <section className="service-hero inventory-hero">
                 <div className="container">
                     <h1 className="service-title">INVENTORY <span className="highlight">MANAGEMENT</span> SERVICES</h1>

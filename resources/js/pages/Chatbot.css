@@ -1,0 +1,26 @@
+.chatbot-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+}
+
+.chatbot-hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+    background: white;
+}
+
+.chatbot-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.chatbot-hero p {
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.chatbot-content {
+    padding: 4rem 0;
+    text-align: center;
+}

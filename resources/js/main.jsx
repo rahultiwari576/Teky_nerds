@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './app.jsx';
 import './index.css';
 
@@ -19,9 +20,11 @@ if (!rootElement) {
         console.log('Rendering App component...');
         root.render(
             <React.StrictMode>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
+                <HelmetProvider>
+                    <BrowserRouter>
+                        <App />
+                    </BrowserRouter>
+                </HelmetProvider>
             </React.StrictMode>
         );
         console.log('✅ React app mounted successfully!');

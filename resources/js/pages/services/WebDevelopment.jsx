@@ -17,25 +17,6 @@ const WebDevelopment = () => {
     return (
         <div className="service-page">
             {/* Breadcrumb Navbar */}
-            <nav className="service-breadcrumb">
-                <div className="container">
-                    <div className="breadcrumb-content">
-                        <div className="breadcrumb-links">
-                            <Link to="/">Home</Link>
-                            <span className="breadcrumb-separator">/</span>
-                            <Link to="/services">Services</Link>
-                            <span className="breadcrumb-separator">/</span>
-                        </div>
-                        <div className="breadcrumb-active">
-                            <span>Web Development</span>
-                        </div>
-                        <div className="breadcrumb-actions">
-                            <Link to="/contact" className="breadcrumb-button">Get started</Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
             <section className="service-hero web-dev-hero">
                 <div className="container">
                     <h1 className="service-title">WEB <span className="highlight">DEVELOPMENT</span> SERVICES</h1>

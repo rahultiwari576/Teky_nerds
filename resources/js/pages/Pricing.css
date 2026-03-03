@@ -1,0 +1,210 @@
+/* Pricing Page - Standalone CSS (works without Tailwind) */
+/* Brand colors: #0F172A, #1E3A8A, #2563EB, #F8FAFC, #111827, #E5E7EB, #475569 */
+
+.pricing-page {
+    min-height: 100vh;
+    background: #F8FAFC;
+}
+
+.pricing-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .pricing-page .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Hero */
+.pricing-hero {
+    padding: 4rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .pricing-hero {
+        padding: 6rem 0;
+    }
+}
+
+.pricing-hero-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .pricing-hero-title {
+        font-size: 2.25rem;
+    }
+}
+
+.pricing-hero-subtitle {
+    color: #475569;
+    max-width: 42rem;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Section blocks */
+.pricing-section {
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .pricing-section {
+        padding: 4rem 0;
+    }
+}
+
+.pricing-section-alt {
+    background: #fff;
+}
+
+.pricing-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Cards grid */
+.pricing-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .pricing-cards-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricing-cards-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 48rem;
+    }
+}
+
+.pricing-card-wrap {
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+/* Card */
+.pricing-card {
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pricing-card:hover {
+    border-color: #2563EB;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card-price {
+    color: #2563EB;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.pricing-card-price-extra {
+    color: #2563EB;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    flex: 1;
+}
+
+.pricing-card-features li {
+    font-size: 0.875rem;
+    color: #475569;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.pricing-card-features li::before {
+    content: "•";
+    color: #2563EB;
+}
+
+.pricing-card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 1rem;
+    background: #2563EB;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.pricing-card-btn:hover {
+    background: #1E3A8A;
+}
+
+/* CTA section */
+.pricing-cta {
+    padding: 4rem 0;
+    background: #0F172A;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .pricing-cta {
+        padding: 6rem 0;
+    }
+}
+
+.pricing-cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.pricing-cta-btn {
+    display: inline-flex;
+    padding: 0.75rem 1.5rem;
+    background: #2563EB;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.pricing-cta-btn:hover {
+    background: #1E3A8A;
+}
